@@ -1,0 +1,23 @@
+﻿@model AddCityViewModel
+@{
+	ViewData["Title"] = "Şehir Ekle";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="card">
+	<div class="card-body">
+		<h5 class="card-title">Şehir Ekle</h5>
+		<form method="post">
+		<p class="card-text">
+				<div class="mb-3">
+					<label class="form-label">Şehir Adı</label>
+					<input type="text" asp-for="CityName" class="form-control" maxlength="200" placeholder="Şehir Giriniz" required pattern="^[a-zA-ZğüşöçİĞÜŞÖÇ]+$">
+				</div>
+				<div class="mb-3">
+					<label class="form-label">Ülke Adı</label>
+					<input type="text" asp-for="CountryName" class="form-control" maxlength="75" placeholder="Ülke Giriniz" required pattern="^[a-zA-ZğüşöçİĞÜŞÖÇ]+$">
+				</div>
+		</p>
+		<button type="submit" class="btn btn-success">Kaydet</button>
+		</form>
+	</div>
+</div>
